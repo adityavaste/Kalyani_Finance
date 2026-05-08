@@ -25,7 +25,7 @@ const Hero = () => {
 
   const slides = [
     {
-      img: "/hero.jpg",
+      img: "/homeimage1.webp",
       title: "TRUSTED FINANCIAL PARTNER",
       heading: "SMART FINANCIAL SOLUTIONS FOR YOUR GROWTH",
       desc: "We provide strategic financial planning, investment solutions, and risk management.",
@@ -33,7 +33,7 @@ const Hero = () => {
       btnLink: "/contact",
     },
     {
-      img: "/firm-handshake.jpg",
+      img: "/homeimage2.webp",
       title: "WEALTH MANAGEMENT",
       heading: "BUILD, MANAGE & GROW YOUR WEALTH CONFIDENTLY",
       desc: "Our experts help you maximize returns while minimizing financial risks.",
