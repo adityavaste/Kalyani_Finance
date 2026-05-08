@@ -398,7 +398,7 @@ const Hero = () => {
       {/* CTA */}
       <div className="relative py-16 md:py-20">
         <img
-          src="/hero.jpg"
+          src="/homeimage1.webp"
           alt="cta"
           className="absolute inset-0 w-full h-full object-cover"
         />
