@@ -1,221 +1,368 @@
-
 "use client";
 
 import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+
 import {
   FaChartLine,
   FaUsers,
   FaAward,
   FaHandshake,
   FaArrowRight,
+  FaCheckCircle,
+  FaGlobe,
+  FaShieldAlt,
 } from "react-icons/fa";
 
 const AboutPage = () => {
   return (
-     <div>
+    <div>
       <Navbar />
-    
-    <div className="bg-[#f5f7fb] text-gray-800 overflow-hidden">
 
-      {/* HERO SECTION */}
-      <section className="relative h-[500px] flex items-center justify-center text-center">
-        <img
-          src="/about-banner.jpg"
-          alt="about"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+      <div className="bg-[#f5f7fb] text-gray-800 overflow-hidden">
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#071c3c]/90 to-[#102f63]/80"></div>
+        {/* HERO SECTION */}
+        <section className="relative h-[650px] flex items-center justify-center text-center overflow-hidden">
 
-        <div className="relative z-10 px-6 max-w-4xl">
-          <p className="uppercase tracking-[5px] text-blue-300 text-sm mb-4">
-            About Kalyani Finance
-          </p>
-
-          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-            Building Financial Success
-            <span className="text-blue-400"> With Trust</span>
-          </h1>
-
-          <p className="mt-6 text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            We help businesses, startups, and individuals achieve financial
-            stability through strategic planning, smart investments, and trusted
-            advisory services.
-          </p>
-
-          <div className="mt-8 flex justify-center gap-5 flex-wrap">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full text-white font-semibold transition duration-300"
-            >
-              Contact Us
-            </Link>
-
-            <Link
-              href="/services"
-              className="border border-white px-8 py-4 rounded-full text-white hover:bg-white hover:text-black transition duration-300"
-            >
-              Explore Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
-
-      {/* ABOUT SECTION */}
-      <section className="max-w-7xl mx-auto px-6 md:px-20 py-24 grid md:grid-cols-2 gap-16 items-center">
-
-        {/* LEFT IMAGE */}
-        <div className="relative">
           <img
-            src="/finance-team.jpg"
-            alt="team"
-            className="rounded-3xl shadow-2xl w-full object-cover"
+            src="/about-banner.jpg"
+            alt="about"
+            className="absolute inset-0 w-full h-full object-cover"
           />
 
-          <div className="absolute -bottom-8 -right-8 bg-blue-600 text-white p-8 rounded-3xl shadow-2xl w-56">
-            <h2 className="text-5xl font-bold">10+</h2>
-            <p className="mt-2 text-sm text-blue-100">
-              Years Of Financial Excellence
-            </p>
-          </div>
-        </div>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#071c3c]/95 via-[#0f172a]/85 to-[#102f63]/80"></div>
 
+          {/* Glow */}
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600/20 blur-3xl rounded-full"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 blur-3xl rounded-full"></div>
 
-        {/* RIGHT CONTENT */}
-        <div>
-          <p className="uppercase text-blue-600 tracking-[4px] text-sm font-semibold">
-            Who We Are
-          </p>
+          <div className="relative z-10 px-6 max-w-5xl">
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-[#0f172a] leading-tight">
-            Trusted Financial Experts Helping You Grow
-          </h2>
-
-          <p className="mt-6 text-gray-600 leading-relaxed text-lg">
-            Kalyani Finance is dedicated to delivering modern financial
-            solutions tailored for individuals, startups, and enterprises. We
-            combine industry expertise, technology, and strategic insights to
-            help clients make smarter financial decisions.
-          </p>
-
-          <p className="mt-5 text-gray-600 leading-relaxed text-lg">
-            From wealth management to investment planning and business funding,
-            our mission is to create long-term value and trusted partnerships.
-          </p>
-
-
-          {/* FEATURES */}
-          <div className="grid grid-cols-2 gap-6 mt-10">
-
-            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
-              <FaChartLine className="text-4xl text-blue-600 mb-4" />
-              <h4 className="font-bold text-lg">Smart Investments</h4>
-              <p className="text-sm text-gray-500 mt-2">
-                Strategic planning for long-term financial growth.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
-              <FaUsers className="text-4xl text-blue-600 mb-4" />
-              <h4 className="font-bold text-lg">Trusted Advisors</h4>
-              <p className="text-sm text-gray-500 mt-2">
-                Expert financial consultants guiding every step.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
-              <FaAward className="text-4xl text-blue-600 mb-4" />
-              <h4 className="font-bold text-lg">Award Winning</h4>
-              <p className="text-sm text-gray-500 mt-2">
-                Recognized for excellence and client satisfaction.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
-              <FaHandshake className="text-4xl text-blue-600 mb-4" />
-              <h4 className="font-bold text-lg">Strong Partnerships</h4>
-              <p className="text-sm text-gray-500 mt-2">
-                Building trusted and lasting financial relationships.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* STATS SECTION */}
-      <section className="bg-[#071c3c] py-20 px-6 md:px-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition duration-300">
-            <h2 className="text-5xl font-bold text-blue-400">10K+</h2>
-            <p className="mt-3 text-gray-300">Happy Clients</p>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition duration-300">
-            <h2 className="text-5xl font-bold text-blue-400">500+</h2>
-            <p className="mt-3 text-gray-300">Business Partners</p>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition duration-300">
-            <h2 className="text-5xl font-bold text-blue-400">98%</h2>
-            <p className="mt-3 text-gray-300">Client Satisfaction</p>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:-translate-y-2 transition duration-300">
-            <h2 className="text-5xl font-bold text-blue-400">24/7</h2>
-            <p className="mt-3 text-gray-300">Support Available</p>
-          </div>
-        </div>
-      </section>
-
-
-      {/* COMPANY GOAL */}
-      <section className="max-w-7xl mx-auto px-6 md:px-20 py-24">
-        <div className="bg-white rounded-[40px] shadow-xl overflow-hidden grid md:grid-cols-2 items-center">
-
-          <div className="p-10 md:p-16">
-            <p className="uppercase tracking-[4px] text-blue-600 text-sm font-semibold">
-              Our Mission
+            <p className="uppercase tracking-[6px] text-blue-300 text-sm font-semibold">
+              About Kalyani Finance
             </p>
 
-            <h2 className="mt-4 text-4xl font-bold text-[#0f172a] leading-tight">
-              Empowering Financial Freedom Through Innovation
+            <h1 className="text-5xl md:text-7xl font-black text-white leading-tight mt-6">
+              Building Financial Success
+              <span className="text-blue-400"> With Trust</span>
+            </h1>
+
+            <p className="mt-8 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              We help businesses, startups, and individuals achieve financial
+              stability through strategic planning, smart investments,
+              insurance solutions, and trusted advisory services.
+            </p>
+
+            {/* BUTTONS */}
+            <div className="mt-10 flex flex-wrap justify-center gap-5">
+
+              <Link href="/contact">
+                <button className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full text-white font-semibold transition duration-300 hover:scale-105 shadow-xl shadow-blue-500/20">
+                  Get Consultation
+                </button>
+              </Link>
+
+              <Link href="/service">
+                <button className="border border-white/30 backdrop-blur-md px-8 py-4 rounded-full text-white hover:bg-white hover:text-black transition duration-300">
+                  Explore Services
+                </button>
+              </Link>
+
+            </div>
+
+            {/* STATS */}
+            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-5">
+
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-5">
+                <h3 className="text-3xl font-bold text-white">10K+</h3>
+                <p className="text-gray-300 text-sm mt-1">
+                  Happy Clients
+                </p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-5">
+                <h3 className="text-3xl font-bold text-white">15+</h3>
+                <p className="text-gray-300 text-sm mt-1">
+                  Years Experience
+                </p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-5">
+                <h3 className="text-3xl font-bold text-white">98%</h3>
+                <p className="text-gray-300 text-sm mt-1">
+                  Client Satisfaction
+                </p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-5">
+                <h3 className="text-3xl font-bold text-white">24/7</h3>
+                <p className="text-gray-300 text-sm mt-1">
+                  Support
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+
+        {/* ABOUT SECTION */}
+        <section className="max-w-7xl mx-auto px-6 md:px-20 py-28 grid md:grid-cols-2 gap-20 items-center">
+
+          {/* LEFT IMAGE */}
+          <div className="relative">
+
+            <img
+              src="/finance-team.jpg"
+              alt="team"
+              className="rounded-[40px] shadow-2xl w-full h-[650px] object-cover"
+            />
+
+            {/* FLOATING CARD */}
+            <div className="absolute -bottom-10 -right-6 bg-white p-8 rounded-3xl shadow-2xl border border-gray-100 w-72">
+
+              <h2 className="text-5xl font-black text-blue-600">
+                10+
+              </h2>
+
+              <p className="mt-3 text-gray-500 leading-relaxed">
+                Years Of Financial Excellence Helping Businesses &
+                Individuals Grow Successfully.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          {/* RIGHT CONTENT */}
+          <div>
+
+            <p className="uppercase text-blue-600 tracking-[5px] text-sm font-semibold">
+              Who We Are
+            </p>
+
+            <h2 className="mt-5 text-4xl md:text-5xl font-black text-[#0f172a] leading-tight">
+              Trusted Financial Experts Helping You Grow
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-relaxed text-lg">
-              Our goal is to simplify finance for businesses and individuals by
-              offering transparent, innovative, and result-driven financial
-              solutions.
+            <p className="mt-7 text-gray-600 leading-relaxed text-lg">
+              Kalyani Finance is dedicated to delivering modern financial
+              solutions tailored for individuals, startups, and enterprises.
+              We combine industry expertise, innovation, and strategic
+              insights to help clients make smarter financial decisions.
             </p>
 
             <p className="mt-5 text-gray-600 leading-relaxed text-lg">
-              We believe in trust, growth, and long-term success through smart
-              financial strategies and personalized support.
+              From wealth management to investment planning, insurance,
+              and business funding, our mission is to create long-term
+              value and trusted partnerships.
             </p>
 
-            <button className="mt-8 flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full transition duration-300">
-              Learn More <FaArrowRight />
-            </button>
+            {/* CHECKPOINTS */}
+            <div className="mt-10 space-y-5">
+
+              <div className="flex items-center gap-4">
+                <FaCheckCircle className="text-blue-600 text-xl" />
+                <p className="text-gray-700">
+                  Personalized Financial Planning
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <FaCheckCircle className="text-blue-600 text-xl" />
+                <p className="text-gray-700">
+                  Secure & Transparent Solutions
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <FaCheckCircle className="text-blue-600 text-xl" />
+                <p className="text-gray-700">
+                  Expert Investment Guidance
+                </p>
+              </div>
+
+            </div>
+
+
+            {/* FEATURES */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
+
+              <div className="bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-gray-100">
+                <FaChartLine className="text-4xl text-blue-600 mb-5" />
+
+                <h4 className="font-bold text-xl">
+                  Smart Investments
+                </h4>
+
+                <p className="text-sm text-gray-500 mt-3 leading-relaxed">
+                  Strategic planning for long-term financial growth.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-gray-100">
+                <FaUsers className="text-4xl text-blue-600 mb-5" />
+
+                <h4 className="font-bold text-xl">
+                  Trusted Advisors
+                </h4>
+
+                <p className="text-sm text-gray-500 mt-3 leading-relaxed">
+                  Expert financial consultants guiding every step.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-gray-100">
+                <FaAward className="text-4xl text-blue-600 mb-5" />
+
+                <h4 className="font-bold text-xl">
+                  Award Winning
+                </h4>
+
+                <p className="text-sm text-gray-500 mt-3 leading-relaxed">
+                  Recognized for excellence and client satisfaction.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-3xl shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2 border border-gray-100">
+                <FaHandshake className="text-4xl text-blue-600 mb-5" />
+
+                <h4 className="font-bold text-xl">
+                  Strong Partnerships
+                </h4>
+
+                <p className="text-sm text-gray-500 mt-3 leading-relaxed">
+                  Building trusted and lasting financial relationships.
+                </p>
+              </div>
+
+            </div>
+
           </div>
 
-          <div className="h-full">
-            <img
-              src="/finance-office.jpg"
-              alt="office"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </section>
+        </section>
 
-    </div>
+
+        {/* WHY CHOOSE US */}
+        <section className="bg-slate-950 py-28 px-6 md:px-20 relative overflow-hidden">
+
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600/20 blur-3xl rounded-full"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 blur-3xl rounded-full"></div>
+
+          <div className="relative z-10 max-w-7xl mx-auto">
+
+            <div className="text-center max-w-3xl mx-auto">
+
+              <p className="uppercase tracking-[5px] text-blue-400 text-sm font-semibold">
+                Why Choose Us
+              </p>
+
+              <h2 className="text-4xl md:text-5xl font-black text-white mt-5 leading-tight">
+                Modern Financial Solutions For Every Need
+              </h2>
+
+              <p className="mt-6 text-gray-400 text-lg leading-relaxed">
+                We combine financial expertise, technology, and personalized
+                support to help clients achieve stability and growth.
+              </p>
+
+            </div>
+
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+
+              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[30px] p-10 hover:bg-white/10 transition duration-300">
+
+                <FaShieldAlt className="text-5xl text-blue-400" />
+
+                <h3 className="text-2xl font-bold text-white mt-8">
+                  Secure Solutions
+                </h3>
+
+                <p className="text-gray-400 mt-4 leading-relaxed">
+                  Transparent and secure financial services you can trust.
+                </p>
+
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[30px] p-10 hover:bg-white/10 transition duration-300">
+
+                <FaGlobe className="text-5xl text-blue-400" />
+
+                <h3 className="text-2xl font-bold text-white mt-8">
+                  Global Reach
+                </h3>
+
+                <p className="text-gray-400 mt-4 leading-relaxed">
+                  Serving businesses and individuals with world-class support.
+                </p>
+
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[30px] p-10 hover:bg-white/10 transition duration-300">
+
+                <FaHandshake className="text-5xl text-blue-400" />
+
+                <h3 className="text-2xl font-bold text-white mt-8">
+                  Trusted Partnerships
+                </h3>
+
+                <p className="text-gray-400 mt-4 leading-relaxed">
+                  Long-term financial relationships focused on client success.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+
+        {/* CTA SECTION */}
+        <section className="max-w-7xl mx-auto px-6 md:px-20 py-28">
+
+          <div className="bg-gradient-to-r from-blue-700 to-slate-900 rounded-[40px] p-12 md:p-20 text-center relative overflow-hidden">
+
+            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+
+            <div className="relative z-10 max-w-3xl mx-auto">
+
+              <p className="uppercase tracking-[5px] text-blue-200 text-sm font-semibold">
+                Get Started
+              </p>
+
+              <h2 className="text-4xl md:text-5xl font-black text-white mt-6 leading-tight">
+                Let’s Build Your Financial Future Together
+              </h2>
+
+              <p className="mt-6 text-blue-100 text-lg leading-relaxed">
+                Connect with our finance experts today and discover smart
+                solutions designed for your growth and success.
+              </p>
+
+              <Link href="/contact">
+                <button className="mt-10 bg-white text-blue-700 hover:bg-blue-50 px-10 py-4 rounded-full font-semibold transition duration-300 hover:scale-105 inline-flex items-center gap-3">
+                  Contact Us
+                  <FaArrowRight />
+                </button>
+              </Link>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    
     </div>
   );
 };
 
 export default AboutPage;
-
